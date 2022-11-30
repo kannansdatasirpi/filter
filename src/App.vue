@@ -1,15 +1,22 @@
+<!--filters that can be used to apply common text formatting-->
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+ <div>
+  <h1>{{$filters.currencyUSD(name)}}</h1>
+  <filterVue/>
+ </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import filterVue from './components/filter.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    filterVue
+  },
+  data() {
+    return {name:"kannan s"}
   }
 }
 </script>
